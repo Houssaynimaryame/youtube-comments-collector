@@ -1,0 +1,109 @@
+{
+  "question_de_recherche": "Quelle opinion les utilisateurs expriment-ils à propos de l'intelligence artificielle ?",
+  "source": "YouTube Data API v3",
+  "unite_d_analyse": "commentaire de premier niveau",
+  "date_collecte_debut": "2026-10-27T22:44:42.056245+00:00",
+  "date_collecte_fin": "2026-10-27T22:45:10.705692+00:00",
+  "parametres": {
+    "requete": "\"artificial intelligence\"|\"machine learning\"|\"ChatGPT\"",
+    "max_videos": 8,
+    "max_commentaires_par_video": 300,
+    "publie_apres": "2025-01-01",
+    "publie_avant": "2026-10-27",
+    "langue_pertinence_recherche": "en",
+    "langues_conservees": [
+      "en",
+      "fr"
+    ],
+    "mots_cles_pertinence": null,
+    "longueur_min_texte": 3,
+    "tri_commentaires": "relevance",
+    "min_commentaires_par_video": 100
+  },
+  "criteres_inclusion": [
+    "Commentaires de premier niveau de vidÃ©os retournÃ©es par la recherche",
+    "Texte d'au moins 3 caractÃ¨res",
+    "VidÃ©o avec au moins 100 commentaires",
+    "Langue dans : en,fr"
+  ],
+  "criteres_exclusion": [
+    "Textes vides ou trop courts",
+    "Doublons (mÃªme comment_id ou mÃªme texte normalisÃ©)",
+    "Langue dÃ©tectÃ©e hors liste"
+  ],
+  "transformations": [
+    "Extraction des champs : id, vidÃ©o, texte, date, likes, rÃ©ponses",
+    "Pseudonymisation de l'auteur (SHA-256 tronquÃ© Ã  12 caractÃ¨res)",
+    "Suppression des textes invalides et des doublons",
+    "DÃ©tection de langue (langdetect)"
+  ],
+  "collecte_interrompue": null,
+  "statistiques_collecte": {
+    "requests": 20,
+    "retries": 0,
+    "failed_requests": 0,
+    "quota_units": 119,
+    "videos_comments_disabled": 0,
+    "videos_failed": 0,
+    "errors": []
+  },
+  "validation": {
+    "n_collecte": 1675,
+    "colonnes_manquantes": [],
+    "valeurs_manquantes": {
+      "comment_id": 0,
+      "video_id": 0,
+      "text": 0,
+      "author_hash": 0,
+      "published_at": 0,
+      "like_count": 0,
+      "content_type": 0
+    },
+    "n_invalides": 11,
+    "n_doublons_id": 0,
+    "n_doublons_texte": 29,
+    "n_doublons": 29,
+    "n_hors_langue": 181,
+    "n_hors_sujet": 0,
+    "dates_invalides": 0,
+    "date_min": "2025-10-17 16:00:29+00:00",
+    "date_max": "2026-10-27 18:34:15+00:00",
+    "repartition_langues": {
+      "en": 1435,
+      "fr": 11,
+      "unknown": 8
+    },
+    "repartition_types": {
+      "commentaire": 1454
+    },
+    "commentaires_par_video": {
+      "nFRYgfitomc": 286,
+      "7zPQV1BSH_k": 281,
+      "Wq45rvPGNHs": 270,
+      "IsL4dVezs18": 252,
+      "KmcTu2EigTs": 136,
+      "sQwp9GrkGi4": 82,
+      "RsaNTsW_QYk": 76,
+      "tqKGaqaQkNk": 71
+    },
+    "n_videos": 8,
+    "n_final": 1454,
+    "formule_verifiee": true,
+    "erreurs_collecte": {
+      "requetes": 20,
+      "reessais": 0,
+      "requetes_echouees": 0,
+      "videos_commentaires_desactives": 0,
+      "videos_en_echec": 0
+    }
+  },
+  "fichiers": {
+    "brut": "data\\raw\\youtube_raw_20261027_224442.json",
+    "prepare": "data\\processed\\comments_processed_20261027_224442.csv",
+    "analytique": "data\\analytical\\corpus_20261027_224442.csv"
+  },
+  "environnement": {
+    "python": "3.13.9",
+    "pandas": "2.3.3"
+  }
+}

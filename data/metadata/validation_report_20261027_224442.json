@@ -1,0 +1,50 @@
+{
+  "n_collecte": 1675,
+  "colonnes_manquantes": [],
+  "valeurs_manquantes": {
+    "comment_id": 0,
+    "video_id": 0,
+    "text": 0,
+    "author_hash": 0,
+    "published_at": 0,
+    "like_count": 0,
+    "content_type": 0
+  },
+  "n_invalides": 11,
+  "n_doublons_id": 0,
+  "n_doublons_texte": 29,
+  "n_doublons": 29,
+  "n_hors_langue": 181,
+  "n_hors_sujet": 0,
+  "dates_invalides": 0,
+  "date_min": "2025-10-17 16:00:29+00:00",
+  "date_max": "2026-10-27 18:34:15+00:00",
+  "repartition_langues": {
+    "en": 1435,
+    "fr": 11,
+    "unknown": 8
+  },
+  "repartition_types": {
+    "commentaire": 1454
+  },
+  "commentaires_par_video": {
+    "nFRYgfitomc": 286,
+    "7zPQV1BSH_k": 281,
+    "Wq45rvPGNHs": 270,
+    "IsL4dVezs18": 252,
+    "KmcTu2EigTs": 136,
+    "sQwp9GrkGi4": 82,
+    "RsaNTsW_QYk": 76,
+    "tqKGaqaQkNk": 71
+  },
+  "n_videos": 8,
+  "n_final": 1454,
+  "formule_verifiee": true,
+  "erreurs_collecte": {
+    "requetes": 20,
+    "reessais": 0,
+    "requetes_echouees": 0,
+    "videos_commentaires_desactives": 0,
+    "videos_en_echec": 0
+  }
+}

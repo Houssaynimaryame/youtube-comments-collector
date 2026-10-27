@@ -1,0 +1,7 @@
+requests>=2.31
+python-dotenv>=1.0
+pandas>=2.0
+langdetect>=1.0.9
+# Pour le notebook
+matplotlib>=3.7
+ipykernel>=6.0
